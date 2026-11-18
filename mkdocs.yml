@@ -1,0 +1,95 @@
+site_name: OpenSOC Lab
+site_description: Open Source Detection Engineering & Threat Hunting Laboratory
+site_url: https://example.github.io/OpenSOC-Lab/
+repo_name: OpenSOC-Lab
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    scheme: slate
+    primary: black
+    accent: cyan
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+  font:
+    text: Inter
+    code: JetBrains Mono
+extra_css:
+  - assets/stylesheets/opensoc.css
+extra_javascript:
+  - assets/javascripts/report.js
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - search:
+      lang: pt
+  - awesome-pages
+  - redirects
+nav:
+  - Início: index.md
+  - Relatório: report.md
+  - Projeto:
+      - Guia do projeto: project/project-guide.md
+      - Visão geral: overview.md
+      - Filosofia: project/lab-philosophy.md
+      - Arquitetura: project/architecture.md
+      - Princípios de design: project/design-principles.md
+      - Stack tecnológico: project/technology-stack.md
+      - Roadmap: project/roadmap.md
+      - Estrutura do repositório: project/structure.md
+  - Infraestrutura:
+      - Inventário resumido: getting-started/inventory.md
+      - VirtualBox e VMs: infrastructure/virtualbox-inventory.md
+      - Topologia atual: infrastructure/topology.md
+      - Avaliação do host: getting-started/host-assessment.md
+      - Fluxo de dados: architecture/data-flow.md
+      - Plano de rede Wazuh: architecture/network-plan.md
+      - Modelo de ameaças: architecture/threat-model.md
+  - Primeiros passos:
+      - Pré-requisitos: getting-started/prerequisites.md
+      - Instalação e documentação: getting-started/installation.md
+      - MkDocs: getting-started/mkdocs.md
+  - Ferramentas:
+      - Visão geral: tools/index.md
+      - Wazuh:
+          - Introdução: tools/wazuh/index.md
+          - Instalação: tools/wazuh/installation.md
+          - Primeiro agente: tools/wazuh/first-agent.md
+          - Validação: tools/wazuh/validation.md
+          - Troubleshooting: tools/wazuh/troubleshooting.md
+      - Sysmon:
+          - Introdução: tools/sysmon/index.md
+          - Configuração XML: tools/sysmon/configuration.md
+          - Eventos: tools/sysmon/events.md
+          - Tuning: tools/sysmon/tuning.md
+          - Integração com Wazuh: tools/sysmon/wazuh-integration.md
+          - Workflow de estudo: tools/sysmon/study-workflow.md
+  - Laboratórios:
+      - Como executar: guides/running-a-lab.md
+  - Decisões:
+      - Índice: adr/index.md
+      - ADR-0001 — Wazuh: adr/0001-wazuh-primary-platform.md
+      - ADR-0002 — Sysmon: adr/0002-sysmon-windows-telemetry.md
+      - ADR-0003 — MkDocs: adr/0003-mkdocs-documentation.md
+      - ADR-0004 — Implantação Wazuh: adr/0004-wazuh-deployment-strategy.md
+  - Releases:
+      - 0.2.0 — Infraestrutura e Wazuh: releases/0.2.0.md
+      - 0.3.0 — Windows e Sysmon: releases/0.3.0.md
+  - Diário técnico: journal/index.md
+  - Referência:
+      - Glossário: reference/glossary.md
+      - Fontes: reference/references.md
+strict: true
+site_dir: dist

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fixture exclusiva para testar Analyze-SysmonConfig.ps1. Não aplicar em endpoints. -->
+<Sysmon schemaversion="4.90">
+  <HashAlgorithms>SHA256</HashAlgorithms>
+  <EventFiltering>
+    <RuleGroup name="process-test" groupRelation="or">
+      <ProcessCreate onmatch="include">
+        <Image condition="end with">cmd.exe</Image>
+      </ProcessCreate>
+    </RuleGroup>
+    <NetworkConnect onmatch="exclude">
+      <Image condition="is">C:\Windows\System32\example.exe</Image>
+    </NetworkConnect>
+  </EventFiltering>
+</Sysmon>

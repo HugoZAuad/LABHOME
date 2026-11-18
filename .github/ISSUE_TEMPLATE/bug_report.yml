@@ -1,0 +1,30 @@
+name: Relatar problema
+description: Informe um erro reproduzível na documentação, automação ou configuração.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição
+      description: O que ocorreu e o que era esperado?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Como reproduzir
+      description: Inclua versões e passos seguros, sem dados sensíveis.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidências sanitizadas
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Segurança
+      options:
+        - label: Removi credenciais, dados pessoais e informações sensíveis.
+          required: true

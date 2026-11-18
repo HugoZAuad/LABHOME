@@ -1,0 +1,20 @@
+lab:
+  environment: "home-lab"
+  timezone_display: "America/Sao_Paulo"
+  timestamps_storage: "UTC"
+
+wazuh_core:
+  deployment: "all-in-one-proposed"
+  hostname: "CHANGE_ME"
+  address: "CHANGE_ME"
+  operating_system: "CHANGE_ME"
+  version: "NOT_INSTALLED"
+  cpu_cores: 0
+  memory_gib: 0
+  storage_gib: 0
+
+first_agent:
+  hostname: "CHANGE_ME"
+  address: "CHANGE_ME"
+  operating_system: "CHANGE_ME"
+  version: "NOT_INSTALLED"
