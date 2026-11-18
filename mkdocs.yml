@@ -1,7 +1,7 @@
 site_name: OpenSOC Lab
 site_description: Open Source Detection Engineering & Threat Hunting Laboratory
-site_url: https://example.github.io/OpenSOC-Lab/
-repo_name: OpenSOC-Lab
+site_url: https://hugozauad.github.io/LABHOME/
+repo_name: HugoZAuad/LABHOME
 theme:
   name: material
   language: pt-BR
